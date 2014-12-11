@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # usage: `python path/to/facebook/output`
 
-
 import sys
 import xml.etree.ElementTree as ElementTree
 
@@ -57,7 +56,6 @@ def parse_messages(filename):
 #           date...
 #       ...
 #
-# let's just look for status updates for now...
 def parse_wall(filename):
     doc = ElementTree.iterparse(
         filename,
@@ -74,7 +72,11 @@ def parse_wall(filename):
             if status and elem.attrib.get('class') == 'comment':
                 yield elem.text
             if elem.tag == 'div':
-                status = elem.tail and 'Mike Perrone updated his' in elem.tail
+                status = elem.tail and any(map(
+                    lambda x: x in elem.tail,
+                    ['Mike Perrone updated his',
+                     'Mike Perrone shared a link',
+                     'Mike Perrone added a new photo to the album']))
 
 
 data = parse_wall(sys.argv[1] + "html/wall.htm")
