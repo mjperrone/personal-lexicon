@@ -65,14 +65,14 @@ def parse_wall(filename):
             encoding='utf-8'
         )
     )
-    status = False
+    my_content = False
 
     for event, elem in doc:
         if event == 'start':
-            if status and elem.attrib.get('class') == 'comment':
+            if my_content and elem.attrib.get('class') == 'comment':
                 yield elem.text
             if elem.tag == 'div':
-                status = elem.tail and any(map(
+                my_content = elem.tail and any(map(
                     lambda x: x in elem.tail,
                     ['Mike Perrone updated his',
                      'Mike Perrone shared a link',
