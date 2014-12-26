@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# usage: `python reddit_user_name`
+# usage: `python get_and_parse_reddit.py reddit_user_name`
 
 import time
 import urllib2

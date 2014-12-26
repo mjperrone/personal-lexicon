@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# usage: `python path/to/facebook/output`
+# usage: `python parse_facebook.py path/to/facebook/output`
 
 import sys
 import xml.etree.ElementTree as ElementTree
