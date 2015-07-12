@@ -9,6 +9,7 @@ text that I have produced digitally:
 * [Facebook wall, chats, and photo comments](https://www.facebook.com/help/131112897028467/)
 * [Gmail and google hangouts](https://www.google.com/settings/takeout)
 * [Reddit](https://github.com/reddit/reddit/wiki/JSON) [comments](https://www.reddit.com/user/way_fairer/comments)
+* [Twitter](https://blog.twitter.com/2012/your-twitter-archive)
 * free text notes I've written
 
 
